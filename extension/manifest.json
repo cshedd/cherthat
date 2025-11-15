@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "CherThat",
+  "version": "1.0.0",
+  "description": "Save images to your CherThat moodboard instantly",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+ 
+  },
+  "action": {
+    "default_popup": "",
+    "default_title": "CherThat - Save images to your moodboard"
+  }
+}
+
